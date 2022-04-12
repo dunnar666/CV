@@ -1,0 +1,163 @@
+---
+name: Karl-Gunnar
+surname: Severinsen
+position: "Siviløkonom (fra juni 2022)"
+address: "Fjellvegen 25, 5532 Haugesund"
+phone: +47 452 10 733
+profilepic: "./img/severinsen5.jpg"
+email: "karlgunnar89@outlook.com"
+github: dunnar666
+linkedin: karlgunnar89
+date: "`r format(Sys.time(), '%B %Y')`"
+docname: CV
+output: vitae::awesomecv
+lang: nb-NO
+header-includes:
+  \usepackage{float}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE)
+
+require(xfun)
+
+packages <- c('vitae'     # The CV's LaTeX Template
+             ,'tibble'    # Data structure for tribbles
+             ,'magrittr'  # The Pipe %>%
+             ,'here'      # Relative File Paths
+             ,'readr'     # Data Loading
+             ,'glue'      # String Manipulation
+            )
+
+xfun::pkg_attach2(packages, message = FALSE)
+
+
+library(emojifont)
+library(fontawesome)
+library(dplyr)
+library(kableExtra)
+```
+
+\faIcon{hand-sparkles} Litt om meg
+==================================
+
+ * Lærevillig og lettlært.
+ * Alltid godt humør og trives godt i samarbeid, og i en hektisk hverdag.
+ * Lidenskap for analyse og behandling av data, et tema jeg finner svært spennende med mange muligheter.
+
+\faIcon{university} Utdanning
+==================================
+
+```{r EDUCATION}
+
+tribble(
+    ~degree, ~startYear, ~endYear, ~inst, ~where, ~detail,
+    "Høgskulen på Vestlandet (HVL)", 2020, 2022, "Master of Science in Business, Regional Economics and Innovation", "Haugesund", "Oppnår tittel --- Siviløkonom",
+    "Høgskulen på Vestlandet (HVL)", 2020, 2022, "Master of Science in Business, Regional Economics and Innovation", "Haugesund", "Oppnår tittel --- Master of Science in Business",
+    "Høgskolen Stord/Haugesund (HSH)", 2013, 2016, "Bachelor i økonomi og administrasjon", "Haugesund", "Regnskapsprofil",
+    "Høgskolen Stord/Haugesund (HSH)", 2009, 2010, "Grunnskolelærerutdanning, GLU 5-10", "Stord", "Avbrutt i starten av andre semester, da det ikke var rett utdanningsvalg for meg",
+    "Skeisvang videregående skole", 2005, 2008, "Allmenne, økonomiske og administrative fag", "Haugesund", NA,
+) %>%
+  detailed_entries(
+    with = inst,
+    what = degree,
+    why = detail,
+    when = glue::glue("{startYear} --> {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
+\faIcon{briefcase} Arbeidserfaring
+============================================
+
+```{r EMPLOYMENT}
+
+tribble(
+    ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
+    "Lærerassistent", "Høgskulen på Vestlandet", "August", 2021, "Desember", 2021, "Haugesund", "DATA SCIENCE ---  Bistod studenter med installasjon og oppsett av bl.a. programmeringsverktøyet R Studio. Veiledning og hjelp ved arbeidskrav",
+    "Lærerassistent", "Høgskulen på Vestlandet", "August", 2021, "Desember", 2021, "Haugesund", "ØKONOMETRI --- Klargjøring og presentasjon (i klasserom, 4t ukentlig) av oppgaver i faget, ved bruk av R Studio",
+    "Lærerassistent", "Høgskulen på Vestlandet", "August", 2021, "Desember", 2021, "Haugesund", "Generell veiledning og hjelp underveis i begge fag",
+    "IT-lærer", "Folkeuniversitetet", "Juni", 2021, "Juli", 2021, "Haugesund", "Somerkurs for NAV Haugesund, fulltid 3 uker",
+    "IT-lærer", "Folkeuniversitetet", "Juni", 2021, "Juli", 2021, "Haugesund", "Ansvar for egen klasse med 10 elever",
+    "IT-lærer", "Folkeuniversitetet", "Juni", 2021, "Juli", 2021, "Haugesund", "HOVEDOPPGAVER --- Gi innvandrere grunnleggende innføring i bruk av PC, enkel tekstbehandling, søkemotorer, Teams, o.l.",
+    "Prosjektleder", "Haugaland Kraft AS", "Mars", 2021, "Juni", 2021, "Haugesund", "Praksis gjennom studiet, fulltid 10 uker",
+    "Prosjektleder", "Haugaland Kraft AS", "Mars", 2021, "Juni", 2021, "Haugesund", "Laget konkurrentanalyse inkl. forretningsmodeller",
+    "Prosjektleder", "Haugaland Kraft AS", "Mars", 2021, "Juni", 2021, "Haugesund", "Laget spørreundersøkelse og analyse av resultatene",
+    "Prosjektleder", "Haugaland Kraft AS", "Mars", 2021, "Juni", 2021, "Haugesund", "Presentasjon av arbeidet underveis, og av sluttprodukt, for ledelse og øvrig interesserte",
+    "Taxisjåfør", "Gerd Helgesen (L-618 v/Haugesund Taxi)", "Juli", 2017, "August", 2020, "Haugesund", "Fulltid, 6-7 dager i uka",
+    "Taxisjåfør", "Gerd Helgesen (L-618 v/Haugesund Taxi)", "Juli", 2017, "August", 2020, "Haugesund", "Persontransport mot vederlag",
+    "Taxisjåfør", "Gerd Helgesen (L-618 v/Haugesund Taxi)", "Juli", 2017, "August", 2020, "Haugesund", "Stort fokus på kundeservice, skiftoppgjør",
+    "Taxisjåfør", "Geir-Inge Severinsen (L-602 v/Haugesund Taxi)", "November", 2009, "Mai", 2017, "Haugesund", "Fulltid, 5-7 dager i uka (3-4 dager i uka gjennom studietiden)",
+    "Taxisjåfør", "Geir-Inge Severinsen (L-602 v/Haugesund Taxi)", "November", 2009, "Mai", 2017, "Haugesund", "Persontransport mot vederlag",
+    "Taxisjåfør", "Geir-Inge Severinsen (L-602 v/Haugesund Taxi)", "November", 2009, "Mai", 2017, "Haugesund", "Stort fokus på kundeservice, skiftoppgjør",
+    "Portør", "Haugesund Sjukehus", "August", 2008, "August", 2009, "Haugesund", "Vikar kveld/natt",
+    "Portør", "Haugesund Sjukehus", "August", 2008, "August", 2009, "Haugesund", "Transportering av pasienter, utkjøring av mat/tøy til avdelinger, hente boss alle avd., hjelp ved hjertestans mm",
+    "Butikkmedarbeider", "Bike Brothers, Spinn Sykkelshop, Bon Appetit", NA, 2006, NA, 2008, "Haugesund", "Diverse deltidsjobber"
+) %>%
+  detailed_entries(
+    with = title,
+    what = unit,
+    why = detail,
+    when = glue::glue("{startMonth} {startYear} --> {endMonth} {endYear}",.na = ""),
+    where = where
+  )
+
+```
+
+\faIcon{brain} Ferdigheter
+================================
+
+\smallskip
+
+\faIcon{cogs} Tekniske ferdigheter
+---------------------------------
+
+
+```{r TECHTABLE, results='markup'}
+tribble(
+   ~`Programmeringsspråk`, ~Software, ~Annet, ~`Microsoft Office`,
+  "R",
+  "AMPL -- QGIS -- RStudio",
+  "Git -- Markdown -- LaTeX",
+  "Excel -- Outlook -- PowerPoint -- Word"
+) |>
+  kable(booktabs = T, align = 'c', escape = F, format = "latex") |>
+  kable_styling(full_width = F, font_size = 9, latex_options = "HOLD_position") |> 
+  row_spec(0, bold = T, color = "#009acd") |> 
+  row_spec(1, bold = F, color = "#7f7f7f") |> 
+  column_spec(column = 1:4, width = '3.5cm')
+```
+
+\bigskip
+
+\faIcon{language} Språk
+-------------------------------
+
+```{r LANGUAGES, results='markup'}
+
+tribble(
+    ~Norsk, ~Engelsk, ~Tysk,
+    "Morsmål",
+    "Flytende",
+    "Grunnleggende"
+) |>
+  kable(booktabs = T, align = 'c', escape = F, format = "latex") |>
+  kable_styling(full_width = F, font_size = 9, latex_options = "HOLD_position") |> 
+  row_spec(0, bold = T, color = "#009acd") |> 
+  row_spec(1, bold = F, color = "#7f7f7f") |> 
+  column_spec(column = 1:3, width = '3cm')
+```
+
+\faIcon*{file} Publikasjoner
+===========================
+
+```{r PUBLICATIONS}
+library(dplyr)
+#knitr::write_bib(c("vitae", "tibble"), "packages.bib")
+
+bibliography_entries("packages.bib") %>%
+  arrange(desc(author$family), issued)
+```
