@@ -1,7 +1,7 @@
 ---
 name: Karl-Gunnar
 surname: Severinsen
-position: "Siviløkonom (fra juni 2022)"
+position: "MSc in Business / Siviløkonom"
 address: "Fjellvegen 25, 5532 Haugesund"
 phone: +47 452 10 733
 profilepic: "./img/severinsen5.jpg"
@@ -43,9 +43,9 @@ library(kableExtra)
 \faIcon{hand-sparkles} Litt om meg
 ==================================
 
- * Lærevillig og lettlært.
+ * Engasjert, lærevillig og evner å sette meg fort inn i nye arbeidsoppgaver.
  * Alltid godt humør og trives godt i samarbeid, og i en hektisk hverdag.
- * Lidenskap for analyse og behandling av data, et tema jeg finner svært spennende med mange muligheter.
+ * Lidenskap for blant annet tall, forskning, analyse og behandling av data.
 
 \faIcon{university} Utdanning
 ==================================
@@ -54,10 +54,10 @@ library(kableExtra)
 
 tribble(
     ~degree, ~startYear, ~endYear, ~inst, ~where, ~detail,
-    "Høgskulen på Vestlandet (HVL)", 2020, 2022, "Master of Science in Business, Regional Economics and Innovation", "Haugesund", "Oppnår tittel --- Siviløkonom",
     "Høgskulen på Vestlandet (HVL)", 2020, 2022, "Master of Science in Business, Regional Economics and Innovation", "Haugesund", "Oppnår tittel --- Master of Science in Business",
+    "Høgskulen på Vestlandet (HVL)", 2020, 2022, "Master of Science in Business, Regional Economics and Innovation", "Haugesund", "Oppnår tittel --- Siviløkonom",
     "Høgskolen Stord/Haugesund (HSH)", 2013, 2016, "Bachelor i økonomi og administrasjon", "Haugesund", "Regnskapsprofil",
-    "Høgskolen Stord/Haugesund (HSH)", 2009, 2010, "Grunnskolelærerutdanning, GLU 5-10", "Stord", "Avbrutt i starten av andre semester, da det ikke var rett utdanningsvalg for meg",
+    "Høgskolen Stord/Haugesund (HSH)", 2009, 2010, "Grunnskolelærerutdanning, GLU 5-10", "Stord", NA,
     "Skeisvang videregående skole", 2005, 2008, "Allmenne, økonomiske og administrative fag", "Haugesund", NA,
 ) %>%
   detailed_entries(
@@ -77,16 +77,18 @@ tribble(
 
 tribble(
     ~title, ~unit, ~startMonth, ~startYear, ~endMonth, ~endYear, ~where, ~detail,
+    "Assistent", "Høgskulen på Vestlandet", "Januar", 2022, "Juni", 2022, "Haugesund", "Studentrepresentant i jobbintervjuer",
+    "Assistent", "Høgskulen på Vestlandet", "Januar", 2022, "Juni", 2022, "Haugesund", "Veiledning arbeidskrav i faget Anvendt by- og regionaløkonomi",
     "Lærerassistent", "Høgskulen på Vestlandet", "August", 2021, "Desember", 2021, "Haugesund", "DATA SCIENCE ---  Bistod studenter med installasjon og oppsett av bl.a. programmeringsverktøyet R Studio. Veiledning og hjelp ved arbeidskrav",
     "Lærerassistent", "Høgskulen på Vestlandet", "August", 2021, "Desember", 2021, "Haugesund", "ØKONOMETRI --- Klargjøring og presentasjon (i klasserom, 4t ukentlig) av oppgaver i faget, ved bruk av R Studio",
     "Lærerassistent", "Høgskulen på Vestlandet", "August", 2021, "Desember", 2021, "Haugesund", "Generell veiledning og hjelp underveis i begge fag",
     "IT-lærer", "Folkeuniversitetet", "Juni", 2021, "Juli", 2021, "Haugesund", "Somerkurs for NAV Haugesund, fulltid 3 uker",
     "IT-lærer", "Folkeuniversitetet", "Juni", 2021, "Juli", 2021, "Haugesund", "Ansvar for egen klasse med 10 elever",
     "IT-lærer", "Folkeuniversitetet", "Juni", 2021, "Juli", 2021, "Haugesund", "HOVEDOPPGAVER --- Gi innvandrere grunnleggende innføring i bruk av PC, enkel tekstbehandling, søkemotorer, Teams, o.l.",
-    "Prosjektleder", "Haugaland Kraft AS", "Mars", 2021, "Juni", 2021, "Haugesund", "Praksis gjennom studiet, fulltid 10 uker",
-    "Prosjektleder", "Haugaland Kraft AS", "Mars", 2021, "Juni", 2021, "Haugesund", "Laget konkurrentanalyse inkl. forretningsmodeller",
-    "Prosjektleder", "Haugaland Kraft AS", "Mars", 2021, "Juni", 2021, "Haugesund", "Laget spørreundersøkelse og analyse av resultatene",
-    "Prosjektleder", "Haugaland Kraft AS", "Mars", 2021, "Juni", 2021, "Haugesund", "Presentasjon av arbeidet underveis, og av sluttprodukt, for ledelse og øvrig interesserte",
+    "Praksisstudent", "Haugaland Kraft AS", "Mars", 2021, "Juni", 2021, "Haugesund", "Praksis gjennom studiet, fulltid 10 uker",
+    "Praksisstudent", "Haugaland Kraft AS", "Mars", 2021, "Juni", 2021, "Haugesund", "Laget konkurrentanalyse inkl. forretningsmodeller",
+    "Praksisstudent", "Haugaland Kraft AS", "Mars", 2021, "Juni", 2021, "Haugesund", "Laget spørreundersøkelse og analyse av resultatene",
+    "Praksisstudent", "Haugaland Kraft AS", "Mars", 2021, "Juni", 2021, "Haugesund", "Presentasjon av arbeidet underveis, og av sluttprodukt, for ledelse og øvrig interesserte",
     "Taxisjåfør", "Gerd Helgesen (L-618 v/Haugesund Taxi)", "Juli", 2017, "August", 2020, "Haugesund", "Fulltid, 6-7 dager i uka",
     "Taxisjåfør", "Gerd Helgesen (L-618 v/Haugesund Taxi)", "Juli", 2017, "August", 2020, "Haugesund", "Persontransport mot vederlag",
     "Taxisjåfør", "Gerd Helgesen (L-618 v/Haugesund Taxi)", "Juli", 2017, "August", 2020, "Haugesund", "Stort fokus på kundeservice, skiftoppgjør",
